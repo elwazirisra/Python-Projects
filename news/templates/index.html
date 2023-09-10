@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>News</title>
+{% endblock %}
+
+{% block body %}
+    {% for n in news %}
+  <div> 
+      <h2>{{ n['title'] }}</h2>
+      <h3>{{ n['content'] }}</h3>
+      <h5>{{ n['url'] }}</h5>
+      <h1>{{ n['created'][:10] }}</h1>
+  </div>
+   
+    
+ 
+{% endfor %}
+   
+{% endblock %}
